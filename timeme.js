@@ -12,6 +12,7 @@ function getInfo(){
   if(url.length == 8){
     marks = window[url[4].replace("-", "_") + "_" + url[5] + "_total_marks"][url[6]]
     time = window[url[4].replace("-", "_") + "_" + url[5] + "_total_time"][url[6]]
+    return true
   }else{
     return false
   }
@@ -55,9 +56,10 @@ $(document).ready(function(){
 
   $("div.printQuestionContainer").each(function(){
 
+    $(this).removeClass('sx-hidden');
     $(this).append($("<button class='btn btn-cta sx-tap-action time-me'>Time Me!</button>"));
-    $(this).append($("<input type='hidden' id='questionTimer' class='questionTimer form-control' placeholder='marks' minimum=1 value=10>"));
-    $(this).append($("<span class='countdown-timer'>00:00</span>"))
+    $(this).append($("<input type='hidden' id='questionTimer' class='questionTimer form-control' placeholder='marks' minimum=1>"));
+    $(this).append($("<span class='countdown-timer' style='display:none'>00:00</span>"))
 
   });
 

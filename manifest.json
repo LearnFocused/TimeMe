@@ -1,6 +1,6 @@
 {
-"name":"StudyClixLitePlus",
-"description":"Gives access to full StudyClix",
+"name":"TimeMe",
+"description":"Time StudyClix Questions",
 "version":"0.2",
 "manifest_version":2,
 "content_scripts": [
